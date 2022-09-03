@@ -4,6 +4,8 @@ import router from './router'
 import store from './store'
 
 import vuetify from './plugins/vuetify' // path to vuetify export
+import "./styles/index.scss";  // 全局样式
+
 
 Vue.config.productionTip = false
 
