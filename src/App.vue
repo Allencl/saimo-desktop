@@ -1,12 +1,22 @@
 <template>
   <div id="app">
-    <nav>
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </nav>
-    <router-view/>
+    <v-app>
+      <LayoutPage></LayoutPage>
+    </v-app>
   </div>
 </template>
+
+
+<script>
+  // @ is an alias to /src
+  import LayoutPage from '@/components/Layout.vue'
+  
+  export default {
+    components: {
+      LayoutPage
+    }
+  }
+  </script>
 
 <style lang="scss">
 #app {
