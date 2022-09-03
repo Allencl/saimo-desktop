@@ -6285,6 +6285,11 @@
     "@vue/compiler-sfc" "2.7.10"
     "csstype" "^3.1.0"
 
+"vuetify@^2.6.9":
+  "integrity" "sha512-f4jy/DWCwyrkgbbArg0ugSX70aHfv7oO3zz2nuXqoD3W0X8AgunrakzKkt0H+BnuZgesoit9NzLoJNj1GY5DWw=="
+  "resolved" "https://registry.npmmirror.com/vuetify/-/vuetify-2.6.9.tgz"
+  "version" "2.6.9"
+
 "vuex@^3.6.2":
   "integrity" "sha512-ETW44IqCgBpVomy520DT5jf8n0zoCac+sxWnn+hMe/CzaSejb/eVw2YToiXYX+Ex/AuHHia28vWTq4goAexFbw=="
   "resolved" "https://registry.npmmirror.com/vuex/-/vuex-3.6.2.tgz"
