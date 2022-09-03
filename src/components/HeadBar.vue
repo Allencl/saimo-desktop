@@ -1,7 +1,7 @@
 <template>
     <v-toolbar
         elevation="4"
-        shaped
+   
     >
         111
     </v-toolbar>
