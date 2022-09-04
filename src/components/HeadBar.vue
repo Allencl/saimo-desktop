@@ -24,7 +24,7 @@
         <!-- <span>李敏哲</span> -->
         <v-avatar 
           size="36"
-          color="indigo"
+          color="primary"
         >
           <v-icon dark>
             mdi-account-circle

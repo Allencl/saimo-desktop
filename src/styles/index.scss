@@ -12,3 +12,21 @@ body{
     padding-top:16px;
     z-index: inherit !important;
 }
+
+
+::-webkit-scrollbar {
+    // background-color: rgba(101, 100, 100, 0.4);
+    // border-radius: 2px;
+    width: 8px; //y轴滚动条宽度
+    height:8px; //x轴滚动条高度
+}
+  
+::-webkit-scrollbar-thumb {
+    border-radius: 2px; //滚动条的圆角
+    background: rgba(73, 73, 73, 0.5); //滚动条的背景颜色
+}
+  
+::-webkit-scrollbar-track {
+    border-radius: 0px; //滚动条的背景区域的圆角
+    background: #fff; //滚动条的背景颜色
+}
