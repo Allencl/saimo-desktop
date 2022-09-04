@@ -4,9 +4,12 @@
     <v-row no-gutters>
       <v-col
         cols="6"
-        style="padding-top: 12px;"
+        style="padding-top:12px"
       >
-        <span @click="toHome">
+        <span 
+          style="display:inline-block;cursor:pointer;"
+          @click="toHome"
+        >
           <v-img
             class="logo-image"
             max-height="27"

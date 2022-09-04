@@ -5,6 +5,7 @@
             permanent
             expand-on-hover
             absolute
+            style="z-index: 2;"
         >
             <MenuPage />
         </v-navigation-drawer>   

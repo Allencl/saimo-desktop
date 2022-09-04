@@ -5,8 +5,18 @@
         :items="tableItems"
         :items-per-page="tableItems.length"
         hide-default-footer
+        show-select
         class="elevation-4"
-    ></v-data-table>
+    >
+        <template v-slot:item.calories="{ item }">
+            <v-chip
+            :color="getColor(item.calories)"
+            dark
+            >
+            {{ item.calories }}
+            </v-chip>
+        </template>
+    </v-data-table>
  
 </template>
 
@@ -110,6 +120,13 @@
         ],
       }
     },    
+    methods:{
+      getColor (calories) {
+        if (calories > 400) return 'red'
+        else if (calories > 200) return 'orange'
+        else return 'green'
+      },
+    }
   }
 </script>
   
