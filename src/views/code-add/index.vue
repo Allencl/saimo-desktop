@@ -177,6 +177,8 @@
     <v-snackbar
       v-model="snackbar"
       color="success"
+      timeout="1000"
+
     >
       操作成功
       <template v-slot:action="{ attrs }">

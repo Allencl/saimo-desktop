@@ -22,6 +22,7 @@
         fab
         color="primary"
         style="margin-top: -28px;"
+        @click="searchHandle"
       >
       <v-icon dark>mdi-magnify</v-icon>
     </v-btn>
@@ -51,6 +52,23 @@
       </template>
     </v-data-table>
 
+    <v-snackbar
+      v-model="snackbar"
+      color="success"
+    >
+      查询成功
+      <template v-slot:action="{ attrs }">
+        <v-btn
+         
+          text
+          v-bind="attrs"
+          @click="snackbar = false"
+        >
+          关闭
+        </v-btn>
+      </template>
+    </v-snackbar>
+
   </div>
 
 
@@ -65,6 +83,7 @@
     },
     data () {
       return {
+        snackbar:false,
         tableHeaders: [
           { text: 'SN: 片标C',value: 'name'},
           { text: 'SN: 片标H', value: 'fat' },
@@ -403,6 +422,9 @@
         else if (calories > 200) return 'orange'
         else return 'green'
       },
+      searchHandle:function(){
+        this.snackbar=true;
+      }
     }    
   }
 </script>
