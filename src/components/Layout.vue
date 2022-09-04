@@ -1,30 +1,29 @@
 <template>
-    <div>
-        <div class="saimo-layout-container">
-            <div>
-                <HeadBarPage />
+    <div class="saimo-layout-container">
+
+        <v-navigation-drawer
+            permanent
+            expand-on-hover
+            absolute
+        >
+            <MenuPage />
+        </v-navigation-drawer>   
+
+        <v-app-bar 
+            app
+            color="#FFF"
+        >
+            <HeadBarPage />
+        </v-app-bar>
+
+
+        <v-main>
+            <div class="saimo-layout-body">
+                <router-view />
             </div>
-
-            <v-row>
-                <v-col 
-
-                >
-                    222
-                </v-col>
-                <v-col 
-
-                >
-                    1111
-                </v-col>
-
-            </v-row>
-        </div>
-
-
-        <!-- <MenuPage /> -->
-        <!-- <router-view/> -->
+        </v-main>
     </div>
-  </template>
+</template>
   
 <script>
 
@@ -35,17 +34,27 @@
         components: {
             MenuPage,
             HeadBarPage
-        }
+        },
+        data: () => ({
+           
+        }),
     }
 </script>
   
-<!-- Add "scoped" attribute to limit CSS to this component only -->
+
 <style scoped lang="scss">
 .saimo-layout-container{
-    // padding-top: 15px;
-    // padding-left: 14px;
-    // padding-right: 14px;
+
+    .saimo-layout-body{
+        height: calc(100vh - 10vh);
+        overflow-y: auto;
+        padding-left: 62px;
+        padding-right: 8px;
+        padding-top: 20px;
+        padding-bottom: 16px;
+    }
 
 }
+
 </style>
   

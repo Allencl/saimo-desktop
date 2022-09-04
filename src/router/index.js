@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import HomeView from '../views/HomeView.vue'
+
 
 Vue.use(VueRouter)
 
@@ -8,17 +8,31 @@ const routes = [
   {
     path: '/',
     name: 'home',
-    component: HomeView
+    component: () => import(/* 片标打码 */ '../components/Home.vue')
   },
   {
-    path: '/about',
-    name: 'about',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/AboutView.vue')
-  }
+    path: '/code/card',
+    name: 'codeCard',
+    component: () => import(/* 片标打码 */ '../views/code-card/index.vue')
+  },
+  {
+    path: '/code/sn',
+    name: 'codeSN',
+    component: () => import(/* SN 扫码 */ '../views/code-sn/index.vue')
+  },
+
+
 ]
+
+
+
+//获取原型对象上的push函数
+const originalPush = VueRouter.prototype.push
+//修改原型对象中的push方法
+VueRouter.prototype.push = function push(location) {
+  return originalPush.call(this, location).catch(err => err)
+}
+
 
 const router = new VueRouter({
   routes

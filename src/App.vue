@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <v-app>
+    <v-app style="background: inherit;">
       <LayoutPage></LayoutPage>
     </v-app>
   </div>
