@@ -82,6 +82,8 @@
 </template>
   
 <script>
+	import {GlobalBus} from '@/plugins/GlobalBus.js';
+
   export default {
     data: () => ({  
       logoImage: require("@/assets/logo.svg")
@@ -97,7 +99,7 @@
        * 退出登录
        */
        logOutHandle:function(){
-        console.log("111")
+        GlobalBus.$emit("router-toggle",false);
        }
 
     }

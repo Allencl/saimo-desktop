@@ -1,7 +1,8 @@
 <template>
   <div id="app">
     <v-app style="background: inherit;">
-      <LayoutPage></LayoutPage>
+      <LayoutPage v-if="isLogin" />
+      <LoginPage v-if="!isLogin" />
     </v-app>
   </div>
 </template>
@@ -10,10 +11,29 @@
 <script>
   // @ is an alias to /src
   import LayoutPage from '@/components/Layout.vue'
-  
+  import LoginPage from '@/components/Login.vue'
+
+	import {GlobalBus} from '@/plugins/GlobalBus.js';
+
+
   export default {
     components: {
-      LayoutPage
+      LayoutPage,
+      LoginPage
+    },
+    data: () => ({  
+      isLogin:false,
+
+
+    }),
+    created(){
+      const that=this;
+
+      // 路由
+			GlobalBus.$off("router-toggle");
+			GlobalBus.$on("router-toggle", function(active){
+				that.isLogin=active;
+			});
     }
   }
   </script>
