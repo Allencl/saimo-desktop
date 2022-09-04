@@ -16,7 +16,7 @@
             max-width="32"
             :src="logoImage"
           />
-          <v-toolbar-title class="logo-title">SAIMO</v-toolbar-title>
+          <v-toolbar-title class="logo-title">赛摩</v-toolbar-title>
         </span>
       </v-col>
 

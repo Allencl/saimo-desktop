@@ -20,7 +20,11 @@ const routes = [
     name: 'codeSN',
     component: () => import(/* SN 扫码 */ '../views/code-sn/index.vue')
   },
-
+  {
+    path: '/code/add',
+    name: 'codeAdd',
+    component: () => import(/* 新增 SN码 */ '../views/code-add/index.vue')
+  },
 
 ]
 

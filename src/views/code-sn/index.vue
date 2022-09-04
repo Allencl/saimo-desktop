@@ -38,6 +38,7 @@
       :items-per-page="tableItems.length"
       hide-default-footer
       show-select
+      checkbox-color="primary"
       class="elevation-4"
     >
       <template v-slot:item.calories="{ item }">
@@ -66,11 +67,11 @@
       return {
         tableHeaders: [
           { text: 'SN: 片标C',value: 'name'},
-          { text: 'SN: 片标A', value: 'calories' },
           { text: 'SN: 片标H', value: 'fat' },
           { text: 'SN: 片标K', value: 'carbs' },
           { text: 'SN: 片标W', value: 'protein' },
           { text: 'SN: 片标M', value: 'iron' },
+          { text: 'SN: 片标A', value: 'calories' },
         ],
         tableItems: [
           {

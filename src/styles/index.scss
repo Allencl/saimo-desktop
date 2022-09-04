@@ -14,6 +14,31 @@ body{
     // z-index: inherit !important;
 }
 
+.saimo-form-drawer{
+    .toolbar-title{
+        text-align: left;
+        padding-top:26px;
+        padding-left: 2px;
+        padding-bottom: 6px;
+        width: 95%;
+    }
+
+    .v-navigation-drawer__content{
+        padding-left: 3px;
+        padding-right: 3px;
+    }
+
+    .saimo-form-btn-container{
+        margin-top: 22px;
+        text-align: left;
+    }
+
+}
+
+.saimo-form-col{
+    padding: 0px;
+}
+
 
 ::-webkit-scrollbar {
     // background-color: rgba(101, 100, 100, 0.4);

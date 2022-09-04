@@ -36,7 +36,14 @@
           icon:"mdi-alpha-s-circle",
           path:"/code/sn",
           label:"SN扫码"
+        },
+        {
+          icon:"mdi-plus",
+          path:"/code/add",
+          label:"新增SN码"
         }
+
+        
       ]
     }),
     methods:{

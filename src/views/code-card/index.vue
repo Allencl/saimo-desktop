@@ -6,6 +6,7 @@
         :items-per-page="tableItems.length"
         hide-default-footer
         show-select
+        checkbox-color="primary"
         class="elevation-4"
     >
         <template v-slot:item.calories="{ item }">
@@ -30,10 +31,10 @@
       return {
         tableHeaders: [
           { text: '产品: 片标C',value: 'name'},
-          { text: '产品: 片标A', value: 'calories' },
           { text: '产品: 片标H', value: 'fat' },
           { text: '产品: 片标K', value: 'carbs' },
           { text: '产品: 片标W', value: 'protein' },
+          { text: '产品: 片标A', value: 'calories' },
           { text: '产品: 片标M', value: 'iron' },
         ],
         tableItems: [
