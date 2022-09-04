@@ -173,6 +173,25 @@
       </v-row>
     </v-navigation-drawer>
 
+
+    <v-snackbar
+      v-model="snackbar"
+      color="success"
+    >
+      操作成功
+      <template v-slot:action="{ attrs }">
+        <v-btn
+         
+          text
+          v-bind="attrs"
+          @click="snackbar = false"
+        >
+          关闭
+        </v-btn>
+      </template>
+    </v-snackbar>
+
+
   </div>
 
 
@@ -192,6 +211,7 @@
     data () {
       return {
         drawer:false,
+        snackbar:false,
 
         tableHeaders: [
           { text: 'SN: 片标C',value: 'name'},
@@ -285,6 +305,8 @@
       },
       submit () {
         // this.$v.$touch()
+        this.snackbar=true
+
       },
       clear () {
         // this.$v.$reset();
@@ -295,6 +317,7 @@
 
       },
       submit2 () {
+        this.snackbar=true
         // this.$v.$touch()
       },
       clear2 () {
