@@ -53,6 +53,7 @@
         padding-right: 8px;
         padding-top: 20px;
         padding-bottom: 16px;
+        overflow-x: hidden;
     }
 
 }
