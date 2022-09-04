@@ -5,19 +5,30 @@
     <v-toolbar
       elevation="4"
       :absolute="true"
-      color="success"
-      shaped="true"
-      style="margin-top:10px"
+      :shaped="true"
+      class="saimo-table-toolbar-float"
     >
-      <h1>111111111</h1>
-      <h1>111111111</h1>
-      <h1>111111111</h1>
-      <h1>111111111</h1>
-      <h1>111111111</h1>
+      <v-text-field
+        label="请扫描..."
+        prepend-inner-icon="mdi-alpha-s-circle"
+        style="width:420px"
+        clearable
+      ></v-text-field>
+
+      <v-btn
+        class="mx-2"
+        dark
+        small
+        color="primary"
+        style="margin-top: -18px;"
+      >
+      <v-icon dark>mdi-check</v-icon>
+    </v-btn>
+
 
     </v-toolbar>
 
-    <div style="height:62px"></div>
+    <div style="height:68px"></div>
 
 
     <v-data-table

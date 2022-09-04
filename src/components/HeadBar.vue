@@ -4,6 +4,7 @@
     <v-row no-gutters>
       <v-col
         cols="6"
+        style="padding-top: 12px;"
       >
         <span @click="toHome">
           <v-img
