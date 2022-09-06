@@ -1,77 +1,59 @@
 <template>
     <div class="saimo-login">
-     <img class="login-head-logo" src="./../assets/login-logo.png" alt="">
+      <img class="login-head-logo" src="./../assets/login-logo.png" alt="">
 
-        <v-container class="login-form-container">
-            
-          <p class="login-form-title company">山西建设装备制造有限公司</p>
-          <p class="login-form-title">工厂信息化系统</p>
-          <p class="login-form-title login">欢迎登录</p>
-
-
-          <v-form
-            ref="form"
-            lazy-validation
-          >
-            <v-text-field
-              v-model="name"
-              label="用户名"
-              clearable
-              clear-icon="mdi-close-circle"
-              required
-            />
-
-            <v-text-field
-              v-model="email"
-              :type="!showPassword?'password':'text'"
-              label="密码"
-              clearable
-              clear-icon="mdi-close-circle"
-              :append-icon="(showPassword?'mdi-eye':'mdi-eye-off')"
-              required
-              @click:append="showPassword=!showPassword"
-            />
+      <v-container class="login-form-container">
+          
+        <p class="login-form-title company">山西建设装备制造有限公司</p>
+        <p class="login-form-title">工厂信息化系统</p>
+        <p class="login-form-title login">欢迎登录</p>
 
 
-
-            <v-checkbox
-              v-model="checkbox"
-              label="记住密码"
-              required
-            />
-
-
-
-            <v-btn
-              block
-              color="primary"
-              @click="loginHandle"
-            >
-              登 录
-            </v-btn>
-
-
-          </v-form>
-        </v-container>
-
-
-        <v-snackbar
-          v-model="snackbar"
-          timeout="2000"
-          color="success"
+        <v-form
+          ref="form"
+          lazy-validation
         >
-          登录成功
-          <template v-slot:action="{ attrs }">
-            <v-btn
-            
-              text
-              v-bind="attrs"
-              @click="snackbar = false"
-            >
-              关闭
-            </v-btn>
-          </template>
-        </v-snackbar>
+          <v-text-field
+            v-model="name"
+            label="用户名"
+            clearable
+            clear-icon="mdi-close-circle"
+            required
+          />
+
+          <v-text-field
+            v-model="email"
+            :type="!showPassword?'password':'text'"
+            label="密码"
+            clearable
+            clear-icon="mdi-close-circle"
+            :append-icon="(showPassword?'mdi-eye':'mdi-eye-off')"
+            required
+            @click:append="showPassword=!showPassword"
+          />
+
+
+
+          <v-checkbox
+            v-model="checkbox"
+            label="记住密码"
+            required
+          />
+
+
+
+          <v-btn
+            block
+            color="primary"
+            @click="loginHandle"
+          >
+            登 录
+          </v-btn>
+
+
+        </v-form>
+      </v-container>
+
     </div>
 
   </template>
@@ -81,7 +63,6 @@
 
     export default {
         data: () => ({  
-            snackbar:false,
 
             showPassword:false,
 
@@ -96,7 +77,6 @@
              * 登录
             */
             loginHandle(){
-                this.snackbar=true;
                 this.$router.push({path:"/"});
 
                 GlobalBus.$emit("router-toggle",true);
@@ -137,7 +117,7 @@
         top: 155px;
         right: 70px;
         // background: #fff;
-        width: 400px;
+        width: 320px;
         // height: 500px;
     }
     .login-form-title{
