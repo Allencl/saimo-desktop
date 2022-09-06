@@ -77,6 +77,10 @@
              * 登录
             */
             loginHandle(){
+                // this.$store.dispatch("toast",{
+                //   text:"操作成功！",
+                // });
+                // return
                 this.$router.push({path:"/"});
                 GlobalBus.$emit("router-toggle",true);
             },

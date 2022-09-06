@@ -13,10 +13,9 @@ import "./styles/index.scss";  // 全局样式
 
 Vue.config.productionTip = false;
 
-const options = {
-  // toast You can set your default options here
-};
-Vue.use(Toast, options);
+Vue.use(Toast,{
+  maxToasts: 5,
+});
 
 new Vue({
   vuetify,
