@@ -9,35 +9,27 @@
         <p class="login-form-title login">欢迎登录</p>
 
 
+
         <v-form
           ref="form"
           lazy-validation
         >
-          <v-text-field
-            v-model="name"
+          <SaimoInput 
+            v-model="formData.name"
             label="用户名"
-            clearable
-            clear-icon="mdi-close-circle"
             required
           />
 
-          <v-text-field
-            v-model="email"
-            :type="!showPassword?'password':'text'"
+          <SaimoInput 
+            v-model="formData.password"
             label="密码"
-            clearable
-            clear-icon="mdi-close-circle"
-            :append-icon="(showPassword?'mdi-eye':'mdi-eye-off')"
+            typePassword
             required
-            @click:append="showPassword=!showPassword"
           />
-
-
 
           <v-checkbox
-            v-model="checkbox"
+            v-model="formData.checkbox"
             label="记住密码"
-            required
           />
 
 
@@ -66,9 +58,14 @@
 
             showPassword:false,
 
-            name: '',
-            email: '',
-            checkbox: false,
+            // 表达数据
+            formData:{
+              name: '',
+              password: '',
+              checkbox: false,
+            },
+
+
 
         }),
         methods:{
@@ -77,12 +74,24 @@
              * 登录
             */
             loginHandle(){
-                // this.$store.dispatch("toast",{
-                //   text:"操作成功！",
-                // });
-                // return
-                this.$router.push({path:"/"});
-                GlobalBus.$emit("router-toggle",true);
+        
+                const validateResult=this.$refs.form.validate();
+                const _formData=this.formData;
+
+                // console.log(validateResult)
+                // console.log(_formData)
+
+
+                if(validateResult){
+                  this.$store.dispatch("toast",{
+                    text:"登录成功！",
+                  });
+
+                  this.$router.push({path:"/"});
+                  GlobalBus.$emit("router-toggle",true);
+                }
+
+
             },
 
         }

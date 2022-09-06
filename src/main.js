@@ -9,6 +9,7 @@ import Toast from "vue-toastification";  // toast
 import "vue-toastification/dist/index.css";
 
 import "./styles/index.scss";  // 全局样式
+import './packages/index.js';  // 全局组件
 
 
 Vue.config.productionTip = false;
