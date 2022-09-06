@@ -78,9 +78,7 @@
             */
             loginHandle(){
                 this.$router.push({path:"/"});
-
                 GlobalBus.$emit("router-toggle",true);
-
             },
 
         }
